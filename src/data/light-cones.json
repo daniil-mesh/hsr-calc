@@ -1,0 +1,18 @@
+{
+  "lightCones": [
+    {
+      "key": "alongThePassingShore",
+      "name": "Along the Passing Shore",
+      "stats": {
+        "atk": 635.04
+      }
+    },
+    {
+      "key": "iShallBeMyOwnSword",
+      "name": "I Shall Be My Own Sword",
+      "stats": {
+        "atk": 582.12
+      }
+    }
+  ]
+}
