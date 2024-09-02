@@ -1,9 +1,9 @@
-import { EConeStat } from '../enums/stat/cone.ts';
-import { ICone } from '../interfaces/cone.ts';
-import { IDataCone } from '../interfaces/data.ts';
-import { TConeKey } from '../types/cone.ts';
-import { TConeStats } from '../types/stats.ts';
-import { lightCones } from '../data/light-cones.json';
+import { EConeStat } from '@/enums/stat/cone';
+import { ICone } from '@/interfaces/cone';
+import { IDataCone } from '@/interfaces/data';
+import { TConeKey } from '@/types/cone';
+import { TConeStats } from '@/types/stats';
+import { lightCones } from '@/data/light-cones.json';
 
 export default class Cone implements ICone {
   private readonly _key: TConeKey;
@@ -22,7 +22,7 @@ export default class Cone implements ICone {
 
   private takeConeStat(): void {
     const lightCone: IDataCone | undefined = lightCones.find(
-      (cone: IDataCone): boolean => cone.key === this._key,
+      (cone: IDataCone): boolean => cone.key === this._key
     );
     if (lightCone) {
       this._basicStats = lightCone.stats;

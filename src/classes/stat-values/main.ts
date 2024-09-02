@@ -1,4 +1,4 @@
-import { EMainStat } from '../../enums/stat/main.ts';
+import { EMainStat } from '@/enums/stat/main';
 
 export default class MainStatValues {
   public static [EMainStat.atkFlt] = 352.8;

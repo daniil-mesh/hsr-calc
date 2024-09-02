@@ -1,3 +1,3 @@
-import { ECharacterList } from '../enums/character-list.ts';
+import { ECharacterList } from '@/enums/character-list';
 
 export type TCharacterKey = keyof typeof ECharacterList;

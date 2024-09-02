@@ -1,4 +1,4 @@
-import { TConeStats } from '../types/stats.ts';
+import { TConeStats } from '@/types/stats';
 
 export interface ICone {
   basicStats: TConeStats;

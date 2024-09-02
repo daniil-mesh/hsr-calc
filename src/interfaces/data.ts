@@ -1,4 +1,4 @@
-import { TCharacterStats, TConeStats, TMainStats } from '../types/stats.ts';
+import { TCharacterStats, TConeStats, TMainStats } from '@/types/stats';
 
 export interface IDataCharacter {
   key: string;

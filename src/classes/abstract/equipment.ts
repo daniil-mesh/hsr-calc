@@ -1,4 +1,4 @@
-import { TAllStats } from '../../types/stats.ts';
+import { TAllStats } from '@/types/stats';
 
 export default abstract class AEquipment {
   protected allStats: TAllStats extends Record<string, number>

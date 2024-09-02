@@ -1,13 +1,10 @@
-import AEquipment from './abstract/equipment.ts';
-import MainStatValues from './stat-values/main.ts';
-import { TAllStats, TSubStats } from '../types/stats.ts';
-import { EMainStat } from '../enums/stat/main.ts';
+import AEquipment from './abstract/equipment';
+import MainStatValues from './stat-values/main';
+import { TAllStats, TSubStats } from '@/types/stats';
+import { EMainStat } from '@/enums/stat/main';
 
 export default class Relic extends AEquipment {
-  constructor(
-    public subStats: TSubStats,
-    public mainStat: EMainStat,
-  ) {
+  constructor(public subStats: TSubStats, public mainStat: EMainStat) {
     super();
   }
 

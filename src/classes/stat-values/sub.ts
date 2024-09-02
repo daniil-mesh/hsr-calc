@@ -1,4 +1,4 @@
-import { ESubStat } from '../../enums/stat/sub.ts';
+import { ESubStat } from '@/enums/stat/sub';
 
 export default class SubStatValues {
   public static [ESubStat.atkPer] = 0.0389;

@@ -1,11 +1,11 @@
-import Cone from './cone.ts';
-import { ECharacterStat } from '../enums/stat/character.ts';
-import { EConeStat } from '../enums/stat/cone.ts';
-import { ICharacter } from '../interfaces/character.ts';
-import { IDataCharacter } from '../interfaces/data.ts';
-import { TCharacterKey } from '../types/character.ts';
-import { TCharacterStats } from '../types/stats.ts';
-import { characters } from '../data/characters.json';
+import Cone from './cone';
+import { ECharacterStat } from '@/enums/stat/character';
+import { EConeStat } from '@/enums/stat/cone';
+import { ICharacter } from '@/interfaces/character';
+import { IDataCharacter } from '@/interfaces/data';
+import { TCharacterKey } from '@/types/character';
+import { TCharacterStats } from '@/types/stats';
+import { characters } from '@/data/characters.json';
 
 export default class Character implements ICharacter {
   private readonly _key: TCharacterKey;
@@ -34,7 +34,7 @@ export default class Character implements ICharacter {
 
   private getCharacterDataByKey(key: TCharacterKey): void {
     const obj: IDataCharacter | undefined = characters.find(
-      (char: IDataCharacter): boolean => char.key === key,
+      (char: IDataCharacter): boolean => char.key === key
     );
     if (obj) {
       this._basicStats = obj.stats;

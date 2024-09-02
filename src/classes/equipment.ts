@@ -1,12 +1,12 @@
-import { TAllStats } from '../types/stats.ts';
-import AEquipment from './abstract/equipment.ts';
-import Relic from './relic.ts';
-import Body from './relic/body.ts';
-import Feet from './relic/feet.ts';
-import Hands from './relic/hands.ts';
-import Head from './relic/head.ts';
-import Rope from './relic/rope.ts';
-import Sphere from './relic/sphere.ts';
+import { TAllStats } from '@/types/stats';
+import AEquipment from './abstract/equipment';
+import Relic from './relic';
+import Body from './relic/body';
+import Feet from './relic/feet';
+import Hands from './relic/hands';
+import Head from './relic/head';
+import Rope from './relic/rope';
+import Sphere from './relic/sphere';
 
 export default class Equipment extends AEquipment {
   private _equipment: Relic[] = [];
@@ -17,7 +17,7 @@ export default class Equipment extends AEquipment {
     public body: Body,
     public feet: Feet,
     public rope: Rope,
-    public sphere: Sphere,
+    public sphere: Sphere
   ) {
     super();
     this._equipment.push(head, hands, body, feet, rope, sphere);

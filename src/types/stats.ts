@@ -1,8 +1,8 @@
-import { EAllStat } from '../enums/stat/all.ts';
-import { ECharacterStat } from '../enums/stat/character.ts';
-import { EConeStat } from '../enums/stat/cone.ts';
-import { EMainStat } from '../enums/stat/main.ts';
-import { ESubStat } from '../enums/stat/sub.ts';
+import { EAllStat } from '@/enums/stat/all';
+import { ECharacterStat } from '@/enums/stat/character';
+import { EConeStat } from '@/enums/stat/cone';
+import { EMainStat } from '@/enums/stat/main';
+import { ESubStat } from '@/enums/stat/sub';
 
 export type TAllStats = { [stat in EAllStat]: number };
 

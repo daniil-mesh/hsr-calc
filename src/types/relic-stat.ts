@@ -1,4 +1,4 @@
-import { EMainStat } from '../enums/stat/main.ts';
+import { EMainStat } from '@/enums/stat/main';
 
 export type TBodyStat =
   | typeof EMainStat.atkPer

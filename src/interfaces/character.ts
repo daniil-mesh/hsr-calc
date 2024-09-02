@@ -1,4 +1,4 @@
-import { TCharacterStats } from '../types/stats.ts';
+import { TCharacterStats } from '@/types/stats';
 
 export interface ICharacter {
   basicStats: TCharacterStats;

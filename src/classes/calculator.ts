@@ -1,8 +1,8 @@
-import Character from './character.ts';
-import Equipment from './equipment.ts';
-import { TAllStats } from '../types/stats.ts';
-import { EAllStat } from '../enums/stat/all.ts';
-import { ECharacterStat } from '../enums/stat/character.ts';
+import Character from './character';
+import Equipment from './equipment';
+import { TAllStats } from '@/types/stats';
+import { EAllStat } from '@/enums/stat/all';
+import { ECharacterStat } from '@/enums/stat/character';
 
 export default class Calculator {
   private _character: Character | null = null;
