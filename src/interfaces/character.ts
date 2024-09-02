@@ -1,5 +1,7 @@
-import { TCharacterStats } from '@/types/stats';
+import { ECharacter } from '@/enums/character';
+import { TCharacterStats } from '@/types/all-stats';
 
 export interface ICharacter {
-  basicStats: TCharacterStats;
+  readonly key: ECharacter;
+  readonly basicStats: TCharacterStats;
 }

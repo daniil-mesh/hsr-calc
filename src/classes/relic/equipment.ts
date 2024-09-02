@@ -1,14 +1,14 @@
-import { TAllStats } from '@/types/stats';
-import AEquipment from './abstract/equipment';
+import { TAllStats } from '@/types/all-stats';
+import Item from './item';
 import Relic from './relic';
-import Body from './relic/body';
-import Feet from './relic/feet';
-import Hands from './relic/hands';
-import Head from './relic/head';
-import Rope from './relic/rope';
-import Sphere from './relic/sphere';
+import Body from './body';
+import Feet from './feet';
+import Hands from './hands';
+import Head from './head';
+import Rope from './rope';
+import Sphere from './sphere';
 
-export default class Equipment extends AEquipment {
+export default class Equipment extends Item {
   private _equipment: Relic[] = [];
 
   constructor(

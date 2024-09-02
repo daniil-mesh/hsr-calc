@@ -1,31 +1,31 @@
-import { EMainStat } from '@/enums/stat/main';
+import { EStat } from '@/enums/stat';
 
 export type TBodyStat =
-  | typeof EMainStat.atkPer
-  | typeof EMainStat.critDmg
-  | typeof EMainStat.critRate
-  | typeof EMainStat.ehr
-  | typeof EMainStat.hpPer;
+  | typeof EStat.AtkPer
+  | typeof EStat.CritDmg
+  | typeof EStat.CritRate
+  | typeof EStat.EHR
+  | typeof EStat.HpPer;
 
 export type TFeetStat =
-  | typeof EMainStat.atkPer
-  | typeof EMainStat.defPer
-  | typeof EMainStat.hpPer
-  | typeof EMainStat.spdFlt;
+  | typeof EStat.AtkPer
+  | typeof EStat.DefPer
+  | typeof EStat.HpPer
+  | typeof EStat.SpdFlt;
 
-export type THandsStat = typeof EMainStat.atkFlt;
+export type THandsStat = typeof EStat.AtkFlt;
 
-export type THeadStat = typeof EMainStat.hpFlt;
+export type THeadStat = typeof EStat.HpFlt;
 
 export type TSphereStat =
-  | typeof EMainStat.atkPer
-  | typeof EMainStat.defPer
-  | typeof EMainStat.dmgPer
-  | typeof EMainStat.hpPer;
+  | typeof EStat.AtkPer
+  | typeof EStat.DefPer
+  | typeof EStat.DmgPer
+  | typeof EStat.HpPer;
 
 export type TRopeStat =
-  | typeof EMainStat.atkPer
-  | typeof EMainStat.breakEff
-  | typeof EMainStat.defPer
-  | typeof EMainStat.energyReg
-  | typeof EMainStat.hpPer;
+  | typeof EStat.AtkPer
+  | typeof EStat.Break
+  | typeof EStat.DefPer
+  | typeof EStat.ERR
+  | typeof EStat.HpPer;

@@ -1,9 +1,9 @@
-import Relic from '../relic';
-import { TSubStats } from '@/types/stats';
-import { EMainStat } from '@/enums/stat/main';
+import { EStat } from '@/enums/stat';
+import { TSubStats } from '@/types/all-stats';
+import Relic from './relic';
 
 export default class Head extends Relic {
   constructor(subStats: TSubStats) {
-    super(subStats, EMainStat.hpFlt);
+    super(subStats, EStat.HpFlt);
   }
 }

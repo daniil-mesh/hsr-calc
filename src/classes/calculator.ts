@@ -1,8 +1,8 @@
-import Character from './character';
-import Equipment from './equipment';
-import { TAllStats } from '@/types/stats';
-import { EAllStat } from '@/enums/stat/all';
-import { ECharacterStat } from '@/enums/stat/character';
+import { EBasicStat } from '@/enums/basic-stat';
+import { EStat } from '@/enums/stat';
+import { TAllStats } from '@/types/all-stats';
+import Character from './character/character';
+import Equipment from './relic/equipment';
 
 export default class Calculator {
   private _character: Character | null = null;
@@ -23,11 +23,11 @@ export default class Calculator {
       const stats: TAllStats = this._equipment.getAllStats();
 
       return (
-        (this._character.basicStats[ECharacterStat.atk] *
-          (1 + stats[EAllStat.atkPer]) +
-          stats[EAllStat.atkFlt]) *
-        (1 + stats[EAllStat.critRate] * stats[EAllStat.critDmg]) *
-        (1 + stats[EAllStat.dmgPer])
+        (this._character.basicStats[EBasicStat.Atk] *
+          (1 + stats[EStat.AtkPer]) +
+          stats[EStat.AtkFlt]) *
+        (1 + stats[EStat.CritRate] * stats[EStat.CritDmg]) *
+        (1 + stats[EStat.DmgPer])
       );
     }
     return 0;
