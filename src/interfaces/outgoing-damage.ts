@@ -1,3 +1,3 @@
-export default interface IOutgoingDamage {
+export interface IOutgoingDamage {
   calculate(): number;
 }

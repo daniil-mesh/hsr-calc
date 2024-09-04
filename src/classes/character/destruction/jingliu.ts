@@ -1,11 +1,12 @@
 import { EBasicStat } from '@/enums/basic-stat';
 import { ECharacter } from '@/enums/character';
 import { TCharacterStats } from '@/types/all-stats';
+import Action from '@/classes/action/action';
 import Character from '../character';
+import Damage from '@/classes/action/damage';
 
 export default class Jingliu extends Character {
   _key: ECharacter = ECharacter.Jingliu;
-
   _basicStats: TCharacterStats = {
     [EBasicStat.Atk]: 679.14,
     [EBasicStat.Def]: 485.1,
@@ -13,15 +14,15 @@ export default class Jingliu extends Character {
     [EBasicStat.Spd]: 96,
   };
 
-  public skill(): void {
-    throw new Error('Method not implemented.');
+  public setSkill(): Action[] {
+    return [new Damage()];
   }
 
-  public talent(): void {
-    throw new Error('Method not implemented.');
+  public setTalent(): Action[] {
+    return [];
   }
 
-  public ultimate(): void {
-    throw new Error('Method not implemented.');
+  public setUltimate(): Action[] {
+    return [new Damage()];
   }
 }

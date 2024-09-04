@@ -1,3 +1,3 @@
-export default interface IAction {
+export interface IAction {
   execute(): void;
 }
