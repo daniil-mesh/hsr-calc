@@ -13,10 +13,6 @@ export default class Acheron extends Character {
     [EBasicStat.Spd]: 101,
   };
 
-  public attack(): void {
-    throw new Error('Method not implemented.');
-  }
-
   public skill(): void {
     throw new Error('Method not implemented.');
   }

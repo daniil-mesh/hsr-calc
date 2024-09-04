@@ -13,10 +13,6 @@ export default class Jingliu extends Character {
     [EBasicStat.Spd]: 96,
   };
 
-  public attack(): void {
-    throw new Error('Method not implemented.');
-  }
-
   public skill(): void {
     throw new Error('Method not implemented.');
   }
