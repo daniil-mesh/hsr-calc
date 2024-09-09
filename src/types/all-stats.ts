@@ -8,7 +8,7 @@ export type TCharacterStats = {
 };
 
 export type TConeStats = {
-  [stat in EBasicStat]: number;
+  [stat in Exclude<EBasicStat, EBasicStat.Spd>]: number;
 };
 
 export type TMainStats = {

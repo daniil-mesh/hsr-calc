@@ -7,8 +7,7 @@ export default class AlongThePassingShore extends Cone {
 
   _basicStats = {
     [EBasicStat.Atk]: 635.04,
-    [EBasicStat.Def]: 0,
-    [EBasicStat.Hp]: 0,
-    [EBasicStat.Spd]: 0,
+    [EBasicStat.Def]: 396.9,
+    [EBasicStat.Hp]: 1058,
   };
 }
