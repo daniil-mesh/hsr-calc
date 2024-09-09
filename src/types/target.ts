@@ -1,5 +1,5 @@
 import { ICharacter } from '@/interfaces/character';
 import { IEnemy } from '@/interfaces/enemy';
-import { IPet } from '@/interfaces/pet';
+import { ISummon } from '@/interfaces/summon';
 
-export type TTarget = ICharacter[] | IEnemy[] | IPet[];
+export type TTarget = ICharacter[] | IEnemy[] | ISummon[];

@@ -1,21 +1,51 @@
 import { ECharacter } from '@/enums/character';
 import { EOpportunity } from '@/enums/opportunity';
 import { ICharacter } from '@/interfaces/character';
+import {
+  TAttackLevel,
+  TSkillLevel,
+  TTalentLevel,
+  TUltimateLevel,
+} from '@/types/opportunity-level';
 import { TCharacterStats } from '@/types/all-stats';
 import Action from '../action/action';
 import Cone from '../cone/cone';
 import Damage from '../action/damage';
+import Equipment from '../relic/equipment';
 
 export default abstract class Character implements ICharacter {
   protected abstract _key: ECharacter;
   protected abstract _basicStats: TCharacterStats;
+
+  protected _skillMap: Map<TSkillLevel, number[]> = new Map();
+  protected _talentMap: Map<TTalentLevel, number[]> = new Map();
+  protected _ultimateMap: Map<TUltimateLevel, number[]> = new Map();
+
+  protected _attackLevel: TAttackLevel = 6;
+  protected _skillLevel: TSkillLevel = 10;
+  protected _talentLevel: TTalentLevel = 10;
+  protected _ultimateLevel: TUltimateLevel = 10;
 
   protected [EOpportunity.Attack]: Action[] = [];
   protected [EOpportunity.Skill]: Action[] = [];
   protected [EOpportunity.Talent]: Action[] = [];
   protected [EOpportunity.Ultimate]: Action[] = [];
 
-  constructor(protected _cone: Cone) {}
+  protected _attackMap = new Map<TAttackLevel, number>()
+    .set(1, 0.5)
+    .set(2, 0.6)
+    .set(3, 0.7)
+    .set(4, 0.8)
+    .set(5, 0.9)
+    .set(6, 1.0)
+    .set(7, 1.1)
+    .set(8, 1.2)
+    .set(9, 1.3);
+
+  constructor(
+    protected _cone: Cone | null = null,
+    protected _equipement: Equipment | null = null
+  ) {}
 
   get key() {
     return this._key;
@@ -30,14 +60,11 @@ export default abstract class Character implements ICharacter {
   public abstract setUltimate(): Action[];
 
   public getAttack() {
-    if (!this._attack) {
-      this._attack = this.setAttack();
-    }
-    return this._attack;
+    return this.getActions(EOpportunity.Attack, this.setAttack());
   }
 
   public setAttack() {
-    return [new Damage()];
+    return [new Damage(this._attackMap.get(this._attackLevel))];
   }
 
   public getSkill() {
