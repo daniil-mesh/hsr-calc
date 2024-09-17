@@ -1,7 +1,7 @@
-import { ECone } from '@/enums/cone';
-import { TConeStats } from '@/types/all-stats';
+import { Cone, ConeValues } from '@/enums/cone';
+import { ConeStats } from '@/types/all-stats';
 
-export interface ICone {
-  readonly key: ECone;
-  readonly basicStats: TConeStats;
+export interface Cone {
+  readonly key: ConeValues;
+  readonly basicStats: ConeStats;
 }

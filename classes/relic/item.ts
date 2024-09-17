@@ -1,8 +1,8 @@
-import { TAllStats } from '@/types/all-stats';
+import { AllStats } from '@/types/all-stats';
 
 export default abstract class Item {
-  protected allStats: TAllStats extends Record<string, number>
-    ? TAllStats
+  protected allStats: AllStats extends Record<string, number>
+    ? AllStats
     : never = {
     atkFlt: 0,
     atkPer: 0,
@@ -19,9 +19,9 @@ export default abstract class Item {
     spdFlt: 0,
   };
 
-  abstract getAllStats(): TAllStats;
+  abstract getAllStats(): AllStats;
 
-  protected getSumAllStats(item: Partial<TAllStats>): TAllStats {
+  protected getSumAllStats(item: Partial<AllStats>): AllStats {
     for (const [key, value] of Object.entries(item)) {
       this.allStats[key] += value;
     }

@@ -1,31 +1,31 @@
-import { EStat } from '@/enums/stat';
+import { Stat } from '@/enums/stat';
 
-export type TBodyStat =
-  | EStat.AtkPer
-  | EStat.CritDmg
-  | EStat.CritRate
-  | EStat.EHR
-  | EStat.HpPer;
+export type BodyStat =
+  | typeof Stat.AtkPer
+  | typeof Stat.CritDmg
+  | typeof Stat.CritRate
+  | typeof Stat.EHR
+  | typeof Stat.HpPer;
 
-export type TFeetStat =
-  | EStat.AtkPer
-  | EStat.DefPer
-  | EStat.HpPer
-  | EStat.SpdFlt;
+export type FeetStat =
+  | typeof Stat.AtkPer
+  | typeof Stat.DefPer
+  | typeof Stat.HpPer
+  | typeof Stat.SpdFlt;
 
-export type THandsStat = EStat.AtkFlt | EStat.AtkPer;
+export type HandsStat = typeof Stat.AtkFlt | typeof Stat.AtkPer;
 
-export type THeadStat = EStat.HpFlt;
+export type HeadStat = typeof Stat.HpFlt;
 
-export type TSphereStat =
-  | EStat.AtkPer
-  | EStat.DefPer
-  | EStat.DmgPer
-  | EStat.HpPer;
+export type SphereStat =
+  | typeof Stat.AtkPer
+  | typeof Stat.DefPer
+  | typeof Stat.DmgPer
+  | typeof Stat.HpPer;
 
-export type TRopeStat =
-  | EStat.AtkPer
-  | EStat.Break
-  | EStat.DefPer
-  | EStat.ERR
-  | EStat.HpPer;
+export type RopeStat =
+  | typeof Stat.AtkPer
+  | typeof Stat.Break
+  | typeof Stat.DefPer
+  | typeof Stat.ERR
+  | typeof Stat.HpPer;

@@ -1,18 +1,14 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-const button = {
-  primary: 'primary',
-  secondary: 'secondary',
+export const ButtonView = {
+  Primary: 'primary',
+  Secondary: 'secondary',
 } as const;
 
-type buttonView = (typeof button)[keyof typeof button];
-
-export type buttonViews = {
-  [key in buttonView]: string;
-};
+type ButtonView = (typeof ButtonView)[keyof typeof ButtonView];
 
 export default interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  view?: buttonView;
+  view?: ButtonView;
 }

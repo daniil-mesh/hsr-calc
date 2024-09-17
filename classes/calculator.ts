@@ -1,14 +1,14 @@
-import { EBasicStat } from '@/enums/basic-stat';
-import { EStat } from '@/enums/stat';
-import { TAllStats } from '@/types/all-stats';
-import Character from './character/character';
+import { BasicStat } from '@/enums/basic-stat';
+import { Stat } from '@/enums/stat';
+import { AllStats } from '@/types/all-stats';
+import AbstactCharacter from './character/abstact-character';
 import Equipment from './relic/equipment';
 
 export default class Calculator {
-  private _character: Character | null = null;
+  private _character: AbstactCharacter | null = null;
   private _equipment: Equipment | null = null;
 
-  public character(character: Character): this {
+  public character(character: AbstactCharacter): this {
     this._character = character;
     return this;
   }
@@ -20,14 +20,13 @@ export default class Calculator {
 
   public calculate(): number {
     if (this._character?.basicStats && this._equipment) {
-      const stats: TAllStats = this._equipment.getAllStats();
+      const stats: AllStats = this._equipment.getAllStats();
 
       return (
-        (this._character.basicStats[EBasicStat.Atk] *
-          (1 + stats[EStat.AtkPer]) +
-          stats[EStat.AtkFlt]) *
-        (1 + stats[EStat.CritRate] * stats[EStat.CritDmg]) *
-        (1 + stats[EStat.DmgPer])
+        (this._character.basicStats[BasicStat.Atk] * (1 + stats[Stat.AtkPer]) +
+          stats[Stat.AtkFlt]) *
+        (1 + stats[Stat.CritRate] * stats[Stat.CritDmg]) *
+        (1 + stats[Stat.DmgPer])
       );
     }
     return 0;

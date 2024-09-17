@@ -1,13 +1,13 @@
-import { EBasicStat } from '@/enums/basic-stat';
-import { ECone } from '@/enums/cone';
-import Cone from '../cone';
+import { BasicStat } from '@/enums/basic-stat';
+import { Cone } from '@/enums/cone';
+import AbstractCone from '../abstract-cone';
 
-export default class AlongThePassingShore extends Cone {
-  _key = ECone.AlongThePassingShore;
+export default class AlongThePassingShore extends AbstractCone {
+  _key = Cone.AlongThePassingShore;
 
   _basicStats = {
-    [EBasicStat.Atk]: 635.04,
-    [EBasicStat.Def]: 396.9,
-    [EBasicStat.Hp]: 1058,
+    [BasicStat.Atk]: 635.04,
+    [BasicStat.Def]: 396.9,
+    [BasicStat.Hp]: 1058,
   };
 }

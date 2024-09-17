@@ -1,9 +1,9 @@
-import { TBodyStat } from '@/types/relic-stat';
-import { TSubStats } from '@/types/all-stats';
+import { BodyStat } from '@/types/relic-stat';
+import { SubStats } from '@/types/all-stats';
 import Relic from './relic';
 
 export default class Body extends Relic {
-  constructor(subStats: TSubStats, mainStat: TBodyStat) {
+  constructor(subStats: SubStats, mainStat: BodyStat) {
     super(subStats, mainStat);
   }
 }

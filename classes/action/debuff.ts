@@ -1,4 +1,4 @@
-import Action from './action';
+import Action from './abstact-action';
 
 export default class Debuff extends Action {
   execute(): void {

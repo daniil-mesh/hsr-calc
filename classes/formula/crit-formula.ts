@@ -1,4 +1,4 @@
-import Formula from './formula';
+import Formula from './abstract-formula';
 
 export default class CritFormula extends Formula {
   calculate(): number {

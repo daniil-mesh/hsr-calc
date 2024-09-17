@@ -1,9 +1,9 @@
-import { TRopeStat } from '@/types/relic-stat';
-import { TSubStats } from '@/types/all-stats';
+import { RopeStat } from '@/types/relic-stat';
+import { SubStats } from '@/types/all-stats';
 import Relic from './relic';
 
 export default class Rope extends Relic {
-  constructor(subStats: TSubStats, mainStat: TRopeStat) {
+  constructor(subStats: SubStats, mainStat: RopeStat) {
     super(subStats, mainStat);
   }
 }

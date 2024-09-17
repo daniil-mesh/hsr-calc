@@ -1,1 +1,1 @@
-export interface ISummon {}
+export interface Summon {}

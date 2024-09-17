@@ -1,1 +1,1 @@
-export interface IEnemy {}
+export interface Enemy {}

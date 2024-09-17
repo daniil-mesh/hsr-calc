@@ -1,17 +1,16 @@
-import { EBasicStat } from '@/enums/basic-stat';
-import { ECharacter } from '@/enums/character';
-import { TCharacterStats } from '@/types/all-stats';
-import Action from '@/classes/action/action';
-import Character from '../character';
+import { Action } from '@/interfaces/action';
+import { BasicStat } from '@/enums/basic-stat';
+import { Character } from '@/enums/character';
+import AbstactCharacter from '../abstact-character';
 import Damage from '@/classes/action/damage';
 
-export default class Jingliu extends Character {
-  _key: ECharacter = ECharacter.Jingliu;
-  _basicStats: TCharacterStats = {
-    [EBasicStat.Atk]: 679.14,
-    [EBasicStat.Def]: 485.1,
-    [EBasicStat.Hp]: 1436,
-    [EBasicStat.Spd]: 96,
+export default class Jingliu extends AbstactCharacter {
+  _key = Character.Jingliu;
+  _basicStats = {
+    [BasicStat.Atk]: 679.14,
+    [BasicStat.Def]: 485.1,
+    [BasicStat.Hp]: 1436,
+    [BasicStat.Spd]: 96,
   };
 
   public setSkill(): Action[] {

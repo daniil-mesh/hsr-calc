@@ -1,4 +1,4 @@
-import Action from './action';
+import Action from './abstact-action';
 
 export default class Heal extends Action {
   execute(): void {

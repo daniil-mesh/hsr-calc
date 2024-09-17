@@ -1,13 +1,13 @@
-import { EBasicStat } from '@/enums/basic-stat';
-import { ECone } from '@/enums/cone';
-import Cone from '../cone';
+import { BasicStat } from '@/enums/basic-stat';
+import { Cone } from '@/enums/cone';
+import AbstractCone from '../abstract-cone';
 
-export default class IShallBeMyOwnSword extends Cone {
-  _key = ECone.IShallBeMyOwnSword;
+export default class IShallBeMyOwnSword extends AbstractCone {
+  _key = Cone.IShallBeMyOwnSword;
 
   _basicStats = {
-    [EBasicStat.Atk]: 582.12,
-    [EBasicStat.Def]: 396.9,
-    [EBasicStat.Hp]: 1164,
+    [BasicStat.Atk]: 582.12,
+    [BasicStat.Def]: 396.9,
+    [BasicStat.Hp]: 1164,
   };
 }

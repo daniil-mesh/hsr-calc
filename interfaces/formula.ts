@@ -1,3 +1,3 @@
-export interface IFormula {
+export interface Formula {
   calculate(): number;
 }

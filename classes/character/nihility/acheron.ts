@@ -1,17 +1,16 @@
-import { EBasicStat } from '@/enums/basic-stat';
-import { ECharacter } from '@/enums/character';
-import { TCharacterStats } from '@/types/all-stats';
-import Action from '@/classes/action/action';
-import Character from '../character';
+import { Action } from '@/interfaces/action';
+import { BasicStat } from '@/enums/basic-stat';
+import { Character, CharacterValues } from '@/enums/character';
+import AbstactCharacter from '../abstact-character';
 import Damage from '@/classes/action/damage';
 
-export default class Acheron extends Character {
-  _key: ECharacter = ECharacter.Acheron;
-  _basicStats: TCharacterStats = {
-    [EBasicStat.Atk]: 698.54,
-    [EBasicStat.Def]: 436.59,
-    [EBasicStat.Hp]: 1125,
-    [EBasicStat.Spd]: 101,
+export default class Acheron extends AbstactCharacter {
+  _key = Character.Acheron;
+  _basicStats = {
+    [BasicStat.Atk]: 698.54,
+    [BasicStat.Def]: 436.59,
+    [BasicStat.Hp]: 1125,
+    [BasicStat.Spd]: 101,
   };
 
   public setSkill(): Action[] {

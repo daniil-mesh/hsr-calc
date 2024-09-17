@@ -1,10 +1,10 @@
-import { ECharacter } from '@/enums/character';
-import { TCharacterStats } from '@/types/all-stats';
-import Action from '@/classes/action/action';
+import { Action } from './action';
+import { CharacterStats } from '@/types/all-stats';
+import { CharacterValues } from '@/enums/character';
 
-export interface ICharacter {
-  readonly key: ECharacter;
-  readonly basicStats: TCharacterStats;
+export interface Character {
+  readonly key: CharacterValues;
+  readonly basicStats: CharacterStats;
 
   getAttack(): Action[];
   setAttack(): void;
