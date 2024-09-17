@@ -5,7 +5,8 @@ export const ButtonView = {
   Secondary: 'secondary',
 } as const;
 
-type ButtonView = (typeof ButtonView)[keyof typeof ButtonView];
+export type ButtonView = (typeof ButtonView)[keyof typeof ButtonView];
+export type ButtonStyles = { [key in ButtonView]: string };
 
 export default interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {

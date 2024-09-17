@@ -1,9 +1,9 @@
 import { BasicStat } from '@/enums/basic-stat';
-import { Cone } from '@/enums/cone';
+import { ConeKey } from '@/enums/cone-key';
 import AbstractCone from '../abstract-cone';
 
 export default class AlongThePassingShore extends AbstractCone {
-  _key = Cone.AlongThePassingShore;
+  _key = ConeKey.AlongThePassingShore;
 
   _basicStats = {
     [BasicStat.Atk]: 635.04,

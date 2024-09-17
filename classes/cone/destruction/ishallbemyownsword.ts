@@ -1,9 +1,9 @@
 import { BasicStat } from '@/enums/basic-stat';
-import { Cone } from '@/enums/cone';
+import { ConeKey } from '@/enums/cone-key';
 import AbstractCone from '../abstract-cone';
 
 export default class IShallBeMyOwnSword extends AbstractCone {
-  _key = Cone.IShallBeMyOwnSword;
+  _key = ConeKey.IShallBeMyOwnSword;
 
   _basicStats = {
     [BasicStat.Atk]: 582.12,

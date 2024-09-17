@@ -14,5 +14,4 @@ export const Stat = {
   SpdFlt: 'spdFlt',
 } as const;
 
-export type StatKeys = keyof typeof Stat;
-export type StatValues = (typeof Stat)[StatKeys];
+export type Stat = (typeof Stat)[keyof typeof Stat];

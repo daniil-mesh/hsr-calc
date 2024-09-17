@@ -1,9 +1,9 @@
 import { Action } from './action';
+import { CharacterKey } from '@/enums/character-key';
 import { CharacterStats } from '@/types/all-stats';
-import { CharacterValues } from '@/enums/character';
 
 export interface Character {
-  readonly key: CharacterValues;
+  readonly key: CharacterKey;
   readonly basicStats: CharacterStats;
 
   getAttack(): Action[];

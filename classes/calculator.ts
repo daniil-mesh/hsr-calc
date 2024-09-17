@@ -1,14 +1,15 @@
 import { BasicStat } from '@/enums/basic-stat';
 import { Stat } from '@/enums/stat';
 import { AllStats } from '@/types/all-stats';
-import AbstactCharacter from './character/abstact-character';
 import Equipment from './relic/equipment';
+import { Character } from '@/interfaces/character';
 
 export default class Calculator {
-  private _character: AbstactCharacter | null = null;
+  private _character: Character | null = null;
+  // todo: must be interface
   private _equipment: Equipment | null = null;
 
-  public character(character: AbstactCharacter): this {
+  public character(character: Character): this {
     this._character = character;
     return this;
   }

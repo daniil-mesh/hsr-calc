@@ -1,19 +1,17 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-const selectorButton = {
-  character: 'character',
-  cone: 'cone',
-  relic: 'relic',
+export const SelectorButtonView = {
+  Character: 'character',
+  Cone: 'cone',
+  Relic: 'relic',
 } as const;
 
-type buttonView = (typeof selectorButton)[keyof typeof selectorButton];
-
-export type selectorButtonViews = {
-  [key in buttonView]: string;
-};
+type SelectorButtonView =
+  (typeof SelectorButtonView)[keyof typeof SelectorButtonView];
+export type SelectorButtonStyles = { [key in SelectorButtonView]: string };
 
 export default interface SelectorButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  view: buttonView;
+  view: SelectorButtonView;
 }

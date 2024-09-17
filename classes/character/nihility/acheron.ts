@@ -1,11 +1,11 @@
 import { Action } from '@/interfaces/action';
 import { BasicStat } from '@/enums/basic-stat';
-import { Character, CharacterValues } from '@/enums/character';
+import { CharacterKey } from '@/enums/character-key';
 import AbstactCharacter from '../abstact-character';
 import Damage from '@/classes/action/damage';
 
 export default class Acheron extends AbstactCharacter {
-  _key = Character.Acheron;
+  _key = CharacterKey.Acheron;
   _basicStats = {
     [BasicStat.Atk]: 698.54,
     [BasicStat.Def]: 436.59,

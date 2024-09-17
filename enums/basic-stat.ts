@@ -5,5 +5,4 @@ export const BasicStat = {
   Spd: 'spd',
 } as const;
 
-export type BasicStatKeys = keyof typeof BasicStat;
-export type BasicStatValues = (typeof BasicStat)[BasicStatKeys];
+export type BasicStat = (typeof BasicStat)[keyof typeof BasicStat];

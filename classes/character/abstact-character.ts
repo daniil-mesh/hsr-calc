@@ -6,15 +6,15 @@ import {
 } from '@/types/opportunity-level';
 import { Action } from '@/interfaces/action';
 import { Character } from '@/interfaces/character';
+import { CharacterKey } from '@/enums/character-key';
 import { CharacterStats } from '@/types/all-stats';
-import { CharacterValues } from '@/enums/character';
 import { Cone } from '@/interfaces/cone';
-import { Opportunity, OpportunityValues } from '@/enums/opportunity';
+import { Opportunity } from '@/enums/opportunity';
 import Damage from '../action/damage';
 import Equipment from '../relic/equipment';
 
 export default abstract class AbstactCharacter implements Character {
-  protected abstract _key: CharacterValues;
+  protected abstract _key: CharacterKey;
   protected abstract _basicStats: CharacterStats;
 
   protected _skillMap: Map<SkillLevel, number[]> = new Map();
@@ -79,7 +79,7 @@ export default abstract class AbstactCharacter implements Character {
     return this.getActions(Opportunity.Ultimate, this.setUltimate());
   }
 
-  private getActions(property: OpportunityValues, actions: Action[]) {
+  private getActions(property: Opportunity, actions: Action[]) {
     if (!this[property]) {
       this[property] = actions;
     }

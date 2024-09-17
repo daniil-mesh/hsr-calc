@@ -1,11 +1,11 @@
 import { Action } from '@/interfaces/action';
 import { BasicStat } from '@/enums/basic-stat';
-import { Character } from '@/enums/character';
+import { CharacterKey } from '@/enums/character-key';
 import AbstactCharacter from '../abstact-character';
 import Damage from '@/classes/action/damage';
 
 export default class Jingliu extends AbstactCharacter {
-  _key = Character.Jingliu;
+  _key = CharacterKey.Jingliu;
   _basicStats = {
     [BasicStat.Atk]: 679.14,
     [BasicStat.Def]: 485.1,

@@ -5,5 +5,4 @@ export const Opportunity = {
   Ultimate: '_ultimate',
 } as const;
 
-export type OpportunityKeys = keyof typeof Opportunity;
-export type OpportunityValues = (typeof Opportunity)[OpportunityKeys];
+export type Opportunity = (typeof Opportunity)[keyof typeof Opportunity];
