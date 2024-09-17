@@ -4,10 +4,15 @@ import Relic from '../relic/relic';
 
 export default function Card() {
   return (
-    <>
+    <article className="flex flex-col gap-4 items-center">
       <Character />
-      <Cone />
-      <Relic />
-    </>
+      <div className="flex gap-3">
+        <Cone />
+        <div className="flex flex-col gap-3">
+          <Relic />
+          <Relic />
+        </div>
+      </div>
+    </article>
   );
 }
